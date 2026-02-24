@@ -1,0 +1,10 @@
+{
+  "id": "syncer",
+  "name": "Syncer",
+  "version": "0.0.1",
+  "minAppVersion": "1.4.0",
+  "description": "One-button syncer: upload to Yandex Disk.",
+  "author": "zlooun",
+  "authorUrl": "https://github.com/zlooun",
+  "isDesktopOnly": true
+}

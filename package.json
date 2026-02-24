@@ -1,0 +1,29 @@
+{
+  "name": "syncer",
+  "version": "0.0.1",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "build": "node esbuild.config.mjs",
+    "dev": "node esbuild.config.mjs --watch"
+  },
+  "dependencies": {
+    "minimatch": "^10.2.2",
+    "obsidian": "latest"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^0.1.0",
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^25.3.0",
+    "esbuild": "^0.27.3",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-obsidianmd": "^0.1.9",
+    "eslint-plugin-prettier": "^5.2.2",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "globals": "^16.5.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  }
+}
