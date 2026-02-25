@@ -16,7 +16,7 @@ function* stateGenerator(states: SyncState[]) {
   }
 }
 
-export default class YandexDiskBackupPlugin extends Plugin {
+export default class SyncerPlugin extends Plugin {
   private statusEl!: HTMLElement;
   private state: SyncState = { kind: 'idle' };
 
@@ -81,7 +81,7 @@ export default class YandexDiskBackupPlugin extends Plugin {
       case 'syncing':
         setIcon(icon, 'cloud-upload');
 
-        if (this.state.total != null && this.state.done != null) {
+        if (this.state.total !== null && this.state.done !== null) {
           text.setText(`Syncer: ${this.state.done}/${this.state.total}`);
           this.statusEl.title = `Syncer: uploading ${this.state.done}/${this.state.total}`;
         } else {
