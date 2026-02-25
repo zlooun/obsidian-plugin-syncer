@@ -51,6 +51,7 @@ export default class SyncerPlugin extends Plugin {
     this.statusEl.empty();
 
     const icon = this.statusEl.createSpan({ cls: 'syncer-icon' });
+    const text = this.statusEl.createSpan({ cls: 'syncer-text' });
 
     switch (this.state.kind) {
       case 'idle':
@@ -74,7 +75,7 @@ export default class SyncerPlugin extends Plugin {
         setIcon(icon, 'cloud-upload');
 
         if (!this.state.total && !this.state.done) {
-          text.setText(`Syncer: ${this.state.done}/${this.state.total}`);
+          text.setText(`${this.state.done}/${this.state.total}`);
           this.statusEl.title = `Syncer: uploading ${this.state.done}/${this.state.total}`;
         } else {
           this.statusEl.title = 'Syncer: syncing';
